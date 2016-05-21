@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<style type="text/css">
+	html, body, .container-fluid {
+    height:100%;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid" style="height:100%">
+<!-- style="height:100%"  -->
+<div class="row" style="height:100%">
+  <div class="col-md-4" style="height:100%" ><iframe src="{{urloff}}" width="100%" height="100%"></iframe></div>
+
+<iframe src="{{urljson1}}"></iframe>
+<iframe src="{{urljson2}}"></iframe>
+<iframe src="{{urljson3}}"></iframe>
+<iframe src="{{urljson4}}"></iframe>
+<h2>Detected Brands</h2>
+<div class="btn btn-default btn-success">{{product.product.brands}}</div>
+{% for brand in brands_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&brand={{brand}}&user_id=hungergames&password=XXXX" role="button">Ajouter "{{brand}}"</a>&nbsp;{% endfor %}
+<h2>Detected Categories</h2>
+<div class="btn btn-default btn-success">{{product.product.categories_tags}}</div>
+{% for category in categories_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&categories={{category}}&user_id=hungergames&password=XXXX" role="button">Ajouter "{{category}}"</a>&nbsp;{% endfor %}
+<h2>Detected Labels</h2>
+<div class="btn btn-default btn-success">{{product.product.labels_tags}}</div>
+{% for label in labels_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&labels={{label}}&user_id=hungergames&password=XXXX" role="button">Ajouter "{{label}}"</a>&nbsp;{% endfor %}
+<h2>Detected Quantity</h2>
+<div class="btn btn-default btn-success">{{product.product.quantity}}</div>
+<h2>Detected Packaging</h2>
+<div class="btn btn-default btn-success">{{product.product.packaging}}</div>
+{% for packaging in packaging_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&packaging={{packaging}}&user_id=hungergames&password=XXXX" role="button">Ajouter "{{packaging}}"</a>&nbsp;{% endfor %}
+<h2>Detected Origins of ingredients</h2>
+
+<h2>Detected Manufacturing of processing places</h2>
+<h2>Detected Packager codes</h2>
+<div class="btn btn-default btn-success">{{product.product.emb_codes_tags}}</div>
+{% for packaging_codes in packaging_codes_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&packaging_codes={{packaging_codes}}&user_id=hungergames&password=XXXX" role="button">Ajouter "{{packaging_codes}}"</a>&nbsp;{% endfor %}
+{% if ingredients_results %}
+<h2>Detected Ingredients</h2>
+<div class="btn btn-default btn-success">{{product.product.ingredients_tags}}</div>
+{% for ingredient in ingredients_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&ingredients={{ingredient}}&user_id=hungergames&password=XXXX" role="button">Ajouter "{{ingredient}}"</a>&nbsp;{% endfor %}
+{% endif %}
+
+
+{% if official_websites_results %}
+<h2>Detected Official Websites</h2>
+{% for official_websites in official_websites_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&official_websites=official_websites&user_id=hungergames&password=XXXX" role="button">Ajouter "{{official_websites}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if best_before_date_results %}
+<h2>Detected Best before dates</h2>
+{% for best_before_date in best_before_date_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&best_before_date=best_before_date&user_id=hungergames&password=XXXX" role="button">Ajouter "{{best_before_date}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if stores_results %}
+<h2>Detected Stores</h2>
+{% for stores in stores_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&stores=stores&user_id=hungergames&password=XXXX" role="button">Ajouter "{{stores}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if traces_results %}
+<h2>Detected Traces</h2>
+{% for traces in traces_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&traces=traces&user_id=hungergames&password=XXXX" role="button">Ajouter "{{traces}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if serving_size_results %}
+<h2>Detected Serving size</h2>
+{% for serving_size in serving_size_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&serving_size=serving_size&user_id=hungergames&password=XXXX" role="button">Ajouter "{{serving_size}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if energy_results %}
+<h2>Detected Energy</h2>
+{% for energy in energy_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&energy=energy&user_id=hungergames&password=XXXX" role="button">Ajouter "{{energy}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if fat_results %}
+<h2>Detected Fat</h2>
+{% for fat in fat_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&fat=fat&user_id=hungergames&password=XXXX" role="button">Ajouter "{{fat}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if saturated_fat_results %}
+<h2>Detected Saturated Fat</h2>
+{% for saturated_fat in saturated_fat_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&saturated_fat=saturated_fat&user_id=hungergames&password=XXXX" role="button">Ajouter "{{saturated_fat}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if carbohydrates_results %}
+<h2>Detected Carbohydrates</h2>
+{% for carbohydrates in carbohydrates_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&carbohydrates=carbohydrates&user_id=hungergames&password=XXXX" role="button">Ajouter "{{carbohydrates}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if sugars_results %}
+<h2>Detected Sugars</h2>
+{% for sugars in sugars_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&sugars=sugars&user_id=hungergames&password=XXXX" role="button">Ajouter "{{sugars}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if fiber_results %}
+<h2>Detected Fiber</h2>
+{% for fiber in fiber_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&fiber=fiber&user_id=hungergames&password=XXXX" role="button">Ajouter "{{fiber}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if proteins_results %}
+<h2>Detected Proteins</h2>
+{% for proteins in proteins_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&proteins=proteins&user_id=hungergames&password=XXXX" role="button">Ajouter "{{proteins}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if salt_results %}
+<h2>Detected Salt</h2>
+{% for salt in salt_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&salt=salt&user_id=hungergames&password=XXXX" role="button">Ajouter "{{salt}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if sodium_results %}
+<h2>Detected Sodium</h2>
+{% for sodium in sodium_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&sodium=sodium&user_id=hungergames&password=XXXX" role="button">Ajouter "{{sodium}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if alcohol_results %}
+<h2>Detected Alcohol</h2>
+{% for alcohol in alcohol_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&alcohol=alcohol&user_id=hungergames&password=XXXX" role="button">Ajouter "{{alcohol}}"</a>&nbsp;{% endfor %}
+{% endif %}
+{% if carbon_footprint_results %}
+<h2>Detected Carbon Footprint</h2>
+{% for carbon_footprint in carbon_footprint_results %}<a class="btn btn-default" href="http://world.openfoodfacts.org/cgi/product_jqm2.pl?code={{code}}&carbon_footprint=carbon_footprint&user_id=hungergames&password=XXXX" role="button">Ajouter "{{carbon_footprint}}"</a>&nbsp;{% endfor %}
+{% endif %}
+
+<h2>Detected languages</h2>
+{{result1.responses.textAnnotations.locale}}
+{{result2.responses.textAnnotations.locale}}
+{{result3.responses.textAnnotations.locale}}
+{{result4.responses.textAnnotations.locale}}
+  
+<br>
+  <div class="col-md-8"><a class="btn btn-default" href="" role="button">Skip</a>&nbsp;&nbsp; <a class="btn btn-default" href="" role="button">Done</a></div>
+
+</div>
+
+
+</div>
+
+
+</body>
+</html>
