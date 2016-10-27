@@ -1,2 +1,3 @@
 # hungergames
-Attempt at gamification using Python and Django
+Gamification of Open Food Facts using Python and Django
+
