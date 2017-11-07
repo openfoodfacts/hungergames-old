@@ -1,8 +1,8 @@
 # hungergames
 Gamification of Open Food Facts using Python and Django<br>
-![Open Food Facts] (http://static.openfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png)
+[![Open Food Facts](http://static.openfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png)](https://world.openfoodfacts.org/)
 
-##Status##
+## Status ##
 [![Project Status](http://opensource.box.com/badges/active.svg)](http://opensource.box.com/badges)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/openfoodfacts/hungergames.svg)](http://isitmaintained.com/project/openfoodfacts/hungergames "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/openfoodfacts/hungergames.svg)](http://isitmaintained.com/project/openfoodfacts/hungergames "Percentage of issues still open")
