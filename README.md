@@ -15,6 +15,6 @@ Gamification of Open Food Facts using Python and Django<br>
 
 ### How to start contributing ###
 
-- Feel free to join us on Slack at http://slack.openfoodfacts.org in the channels: #api #gamification #ocr
+- Feel free to join us on Slack at https://slack.openfoodfacts.org in the channels: #api #gamification #ocr
 - If you're looking for the API, look at https://en.wiki.openfoodfacts.org/API
 - https://en.wiki.openfoodfacts.org/Gamification/Roadmap
