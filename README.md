@@ -1,4 +1,7 @@
-# hungergames
+# Legacy version of Hunger Games (deprecated !)
+> [!WARNING]
+> Legacy version of Hunger Games (deprecated !) Please see: https://github.com/openfoodfacts/hunger-games
+
 This is a series of mini-apps that let users contribute data to Open Food Facts, in a rather fun way using Python and Django. You are very welcome to write one on the field you want.<br>
 [![Open Food Facts](https://static.openfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png)](https://world.openfoodfacts.org/)
 
